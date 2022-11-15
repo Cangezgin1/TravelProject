@@ -6,15 +6,10 @@ using System.Web.Mvc;
 
 namespace TravelProject.Controllers
 {
-    public class DefaultController : Controller
+    public class AnaController : Controller
     {
-        // GET: Default
-        public ActionResult Index()
-        {
-            return View();
-        }
 
-        public ActionResult About()
+        public ActionResult Index()
         {
             return View();
         }
