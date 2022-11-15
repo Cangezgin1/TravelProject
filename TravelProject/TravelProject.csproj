@@ -165,6 +165,8 @@
     <Content Include="web2\images\Fransa.jpg" />
     <Content Include="web2\images\icon3.png" />
     <Content Include="web2\images\logo.jpg" />
+    <Content Include="web\images\Gezgin2.png" />
+    <Content Include="web\images\logoDeneme.png" />
     <Content Include="web2\images\Lyon.jpg" />
     <Content Include="web2\images\man.jpg" />
     <Content Include="web2\images\more.png" />
