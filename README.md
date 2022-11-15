@@ -1,1 +1,1 @@
-<h1>MVC5 ile Seyehat Blog Sitesi</h1>
+<h1 style="text-aling:center">MVC5 ile Seyehat Blog Sitesi</h1>
