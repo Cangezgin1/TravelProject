@@ -9,7 +9,7 @@ namespace TravelProject.Controllers
 {
     public class AboutController : Controller
     {
-        Context c = new Context(); 
+        Context c = new Context(); // Veritabanımızdan veri çekebilmemiz için Context sınıfımızı tanımlıyoruz.
 
         public ActionResult Index()
         {

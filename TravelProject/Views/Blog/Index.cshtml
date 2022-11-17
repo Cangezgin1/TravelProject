@@ -27,7 +27,7 @@
                 <div class="single-grid">
                     @foreach (var item in Model)
                      {
-                        <img src="@item.BlogImage" alt="" />
+                        <img src="@item.BlogImage" alt="" style="margin-bottom:20px" />
                         <a href="/Blog/BlogDetay/@item.ID"><h3>@item.Baslik</h3></a>
                         <p>@item.Aciklama</p>
                      }

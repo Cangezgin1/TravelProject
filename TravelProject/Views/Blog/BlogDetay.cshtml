@@ -1,5 +1,4 @@
-﻿@*@using TravelProject.Models.Sınıflar
-    @model List<Blog>*@
+﻿@model TravelProject.Models.Sınıflar.BlogYorum
 
 
 @{
@@ -24,39 +23,36 @@
         <div class="container">
             <div class="col-md-8 single-main">
                 <div class="single-grid">
-                    <img src="~/web2/images/post1.jpg" alt="" />
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    </p>
+                    @foreach (var item in Model.Deger1)
+                    {
+                        <img src="@item.BlogImage" alt="" style="margin-bottom:20px;" />
+                        <h2>@item.Baslik</h2>
+                        <p>
+                            @item.Aciklama
+                        </p>
+                    }
                 </div>
-                <ul class="comment-list">
-                    <li>
-                        <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
-                        <div class="desc">
-                            <p>Kullanıcı ADI : Yorum yazıcak</p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                </ul>
 
-                <ul class="comment-list">
-                    <li>
-                        <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
-                        <div class="desc">
-                            <p>Kullanıcı ADI : Yorum yazıcak</p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </li>
-                </ul>
+                @foreach (var item in Model.Deger2)
+                {
+                    <ul class="comment-list">
+                        <li>
+                            <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
+                            <div class="desc">
+                                <p>@item.KullaniciAdi: <br /> @item.Yorum</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+                    </ul>
+                }
 
                 <div class="content-form">
-                    <h3>Leave a comment</h3>
+                    <h3>Bir yorum yapınız</h3>
                     <form>
-                        <input type="text" placeholder="Name" required />
-                        <input type="text" placeholder="Email" required />
-                        <input type="text" placeholder="Phone" required />
-                        <textarea placeholder="Message"></textarea>
-                        <input type="submit" value="SEND" />
+                        <input type="text" placeholder="Kullanıcı Adı" required />
+                        <input type="text" placeholder="Mail Adresi" required />
+                        <textarea placeholder="Yorum"></textarea>
+                        <input type="submit" value="Gönder" />
                     </form>
                 </div>
             </div>
@@ -83,5 +79,6 @@
 
             </div>
         </div>
+    </div>
 </body>
 </html>
