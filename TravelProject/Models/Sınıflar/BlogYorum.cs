@@ -9,6 +9,7 @@ namespace TravelProject.Models.Sınıflar
     {
         // Bu şekilde(IEnumerable) bir viewda birden fazla tablodan veri çekebileceğiz.
         public IEnumerable<Blog> Deger1 { get; set; }
+        public IEnumerable<Blog> Deger3 { get; set; }
         public IEnumerable<Yorumlar> Deger2 { get; set; }
     }
 }
