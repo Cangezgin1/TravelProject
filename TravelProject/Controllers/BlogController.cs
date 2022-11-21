@@ -34,17 +34,17 @@ namespace TravelProject.Controllers
         #region Yorum Yapma 
 
         [HttpGet]
-        public PartialViewResult YorumYap(int id)
+        public PartialViewResult YorumYap(int id) // Yorum yapacağımız blogun ıd'sini alıyoruz burda
         {
             ViewBag.deger = id;
             return PartialView();
         }
         [HttpPost]
-        public PartialViewResult YorumYap(Yorumlar y)
+        public PartialViewResult YorumYap(Yorumlar y) // Yorumlardan parametre türetip değerleri ona atıyoruz.
         {
-            c.Yorumlars.Add(y);
-            c.SaveChanges();
-            return PartialView();
+            c.Yorumlars.Add(y); // Ekleme
+            c.SaveChanges(); // Yüklüyruz
+            return PartialView(); 
         }
 
         #endregion

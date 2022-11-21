@@ -57,14 +57,14 @@ namespace TravelProject.Controllers
             return View("BlogGetir",values); // Ve Values değeriyle bilikte BlogGetir sayfasına gidiyoruz.
         }
 
-        public ActionResult BlogGüncelle(Blog p)
+        public ActionResult BlogGüncelle(Blog p) // Blogtan parametre türetip içine değerleri atıyoruz
         {
-            var values = c.Blogs.Find(p.ID);
+            var values = c.Blogs.Find(p.ID); // Idmize karşılık gelen ıd'yi buluyoruz.
             values.Aciklama = p.Aciklama;
             values.Baslik = p.Baslik;
             values.BlogImage = p.BlogImage;
             values.Tarih = p.Tarih;
-            c.SaveChanges();
+            c.SaveChanges(); // Kaydetip yönlendiriyoruz.
             return RedirectToAction("Index");
         }
         #endregion
