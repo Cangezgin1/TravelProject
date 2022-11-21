@@ -18,7 +18,7 @@ namespace TravelProject.Controllers
         public ActionResult Index()
         {
             by.Deger1 = c.Blogs.ToList(); // Blog tablosunu listeliyoruz.
-            by.Deger3 = c.Blogs.Take(2).Distinct(); // Blog tablosundan ilk 2 veriyi getiriyoruz(tekrar edenler hariç yani iki farklı veri( Distinict() ) )
+            by.Deger3 = c.Blogs.OrderByDescending(x=>x.ID).Take(5).Distinct(); // Blog tablosundan ilk 5 veriyi getiriyoruz(tekrar edenler hariç yani iki farklı veri( Distinict() ) )
             return View(by);
         }
 
@@ -26,8 +26,27 @@ namespace TravelProject.Controllers
         {
             by.Deger1 = c.Blogs.Where(x => x.ID == id).ToList(); // İndexs sayfasından müşteri hangi ıdye tıkadıysa o ıd'ye ait Blog detay sayfasını listeliyoruz.
             by.Deger2 = c.Yorumlars.Where(x => x.Blogid == id).ToList(); // Yukardakiyle aynı şekilde aldığımız id ye ait yorumları listeliyoruz.
-            by.Deger3 = c.Blogs.Take(2); // Blog tablosundan 2 adet farklı veri alıyoruz.
+            by.Deger3 = c.Blogs.OrderByDescending(x => x.ID).Take(5).Distinct(); // Blog tablosundan 5 adet farklı veri alıyoruz.
             return View(by);
         }
+
+
+        #region Yorum Yapma 
+
+        [HttpGet]
+        public PartialViewResult YorumYap(int id)
+        {
+            ViewBag.deger = id;
+            return PartialView();
+        }
+        [HttpPost]
+        public PartialViewResult YorumYap(Yorumlar y)
+        {
+            c.Yorumlars.Add(y);
+            c.SaveChanges();
+            return PartialView();
+        }
+
+        #endregion
     }
 }

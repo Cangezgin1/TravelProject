@@ -1,0 +1,39 @@
+﻿@model TravelProject.Models.Sınıflar.BlogYorum
+
+
+@{
+    Layout = null;
+}
+
+<div class="padding1">
+    <h4>En Beğendim Yerler</h4>
+    <div class="box-left">
+        @foreach (var item in Model.Deger1)
+         {
+            <a href="/Blog/BlogDetay/@item.ID">
+                <div class="bot-img">
+                    <img src="@item.BlogImage" alt="" style="width:170px;height:90px;" />
+                </div>
+                <div class="bot-desc">
+                    <p>@item.Aciklama.Substring(0, 100)...</p>
+                </div>
+                <div class="clear"></div>
+            </a>
+         }
+    </div>
+    <div class="box1-left">
+        @foreach (var item in Model.Deger3)
+         {
+            <a href="/Blog/BlogDetay/@item.ID">
+
+                <div class="bot-img">
+                    <img src="@item.BlogImage" alt="" style="width:170px;height:90px;" />
+                </div>
+                <div class="bot-desc1">
+                    <p>@item.Aciklama.Substring(0, 100)...</p>
+                </div>
+                <div class="clear"></div>
+            </a>
+         }
+    </div>
+</div>

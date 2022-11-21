@@ -24,24 +24,26 @@
             <div class="col-md-8 single-main">
                 <div class="single-grid">
                     @foreach (var item in Model.Deger1)
-                    {
-                        <img src="@item.BlogImage" alt="" style="margin-bottom:20px" />
-                        <a href="/Blog/BlogDetay/@item.ID"><h3>@item.Baslik</h3></a>
-                        <p>@item.Aciklama</p>
-                    }
+                     {
+                        <a href="/Blog/BlogDetay/@item.ID">
+                            <img src="@item.BlogImage" alt="" style="margin-bottom:20px" />
+                            <h3>@item.Baslik</h3>
+                            <p>@item.Aciklama.Substring(0, 150)...</p>
+                        </a>
+                     }
                 </div>
                 <br>
             </div>
 
             <div class="col-md-4 side-content">
                 <div class="recent">
-                    <h3>Son Bloglar</h3>
+                    <h3>Son 5 Blog</h3>
                     @foreach (var item in Model.Deger3)
-                    {
+                     {
                         <ul>
                             <li><a href="/Blog/BlogDetay/@item.ID">@item.Baslik</a></li>
                         </ul>
-                    }
+                     }
                 </div>
                 <div class="comments">
                     <h3>Son Yorumlar</h3>

@@ -46,20 +46,12 @@
                     </ul>
                 }
 
-                <div class="content-form">
-                    <h3>Bir yorum yapınız</h3>
-                    <form>
-                        <input type="text" placeholder="Kullanıcı Adı" required />
-                        <input type="text" placeholder="Mail Adresi" required />
-                        <textarea placeholder="Yorum"></textarea>
-                        <input type="submit" value="Gönder" />
-                    </form>
-                </div>
+                @Html.Action("YorumYap","Blog")
             </div>
 
             <div class="col-md-4 side-content">
                 <div class="recent">
-                    <h3>Son Bloglar</h3>
+                    <h3>Son 5 Blog</h3>
                     @foreach (var item in Model.Deger3)
                      {
                         <ul>
