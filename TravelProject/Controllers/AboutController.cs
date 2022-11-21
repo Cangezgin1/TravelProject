@@ -13,7 +13,7 @@ namespace TravelProject.Controllers
 
         public ActionResult Index()
         {
-            var values = c.Hakkimizdas.ToList();
+            var values = c.Hakkimizdas.ToList(); // Hakkımızda Tablosunu Listeliyoruz.
             return View(values);
         }
     }
