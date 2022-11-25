@@ -68,5 +68,49 @@ namespace TravelProject.Controllers
             return RedirectToAction("Index");
         }
         #endregion
+
+        #region Yorum Listeleme
+
+        public ActionResult YorumListesi()
+        {
+            var values = c.Yorumlars.ToList();
+            return View(values);
+        }
+
+        #endregion
+
+        #region Yorum Silme
+
+        public ActionResult YorumSil(int id) // id değeri aldık çünkü silebileceğimiz veriyi bulmak için.
+        {
+            var values = c.Yorumlars.Find(id); // İd'den gelen değerin tablodaki karşılığını bulduk.
+            c.Yorumlars.Remove(values); // Ve veriyi Remove meyhodu ile sildik.
+            c.SaveChanges(); // Güncelledik
+            return RedirectToAction("YorumListesi"); // Ve son olarak Index sayfasına yönlendirdik.
+        }
+
+        #endregion
+
+        #region Yorum Güncelleme
+
+        public ActionResult YorumGetir(int id) // İd'ye göre verilerimizi getireceğiz.
+        {
+            var values = c.Yorumlars.Find(id); // Aldığımız id tablodan hangi idyele eşleşiyor buluyoruz.
+            return View("YorumGetir", values); // Ve Values değeriyle bilikte YorumGetir sayfasına gidiyoruz.
+        }
+
+        public ActionResult YorumGüncelle(Yorumlar p) // Blogtan parametre türetip içine değerleri atıyoruz
+        {
+            var values = c.Yorumlars.Find(p.ID); // Idmize karşılık gelen ıd'yi buluyoruz.
+            values.KullaniciAdi = p.KullaniciAdi;
+            values.Mail = p.Mail;
+            values.Yorum = p.Yorum;
+            c.SaveChanges(); // Kaydetip yönlendiriyoruz.
+            return RedirectToAction("YorumListesi");
+        }
+
+        #endregion
+
+
     }
 }
