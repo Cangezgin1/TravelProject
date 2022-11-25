@@ -11,6 +11,7 @@ namespace TravelProject.Controllers
     {
         Context c = new Context(); // Veri tabanımızdan verileri cekebilmek için Context sınıfımızdan nesne türettik.
 
+        [Authorize]
         public ActionResult Index()
         {
             var values = c.Blogs.ToList(); // Ana sayfada Blog tablomuzdan verileri listeledik.
