@@ -116,5 +116,18 @@ namespace TravelProject.Controllers
         #endregion
 
 
+
+
+
+
+        #region İletişim Listeleme
+
+        public ActionResult İletisim()
+        {
+            var values = c.İletisims.ToList();
+            return View(values);
+        }
+
+        #endregion
     }
 }

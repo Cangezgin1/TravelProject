@@ -1,0 +1,33 @@
+﻿@using TravelProject.Models.Sınıflar
+@model List<İletisim>
+
+@{
+    ViewBag.Title = "İletisim";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="text-align:center;">İletişim Listesi</h2>
+
+<table class="table table-bordered table-responsive-xl" style="text-align:center;">
+    <tr>
+        <th>ID</th>
+        <th>AdSoyad</th>
+        <th>Mail</th>
+        <th>Konu</th>
+        <th>Mesaj</th>
+
+    </tr>
+    @foreach (var item in Model)
+     {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.AdSoyad</td>
+            <td>@item.Mail</td>
+            <td>@item.Konu</td>
+            <td>@item.Mesaj</td>
+        </tr>
+     }
+</table>
+
+
+

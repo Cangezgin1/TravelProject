@@ -133,6 +133,7 @@
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\DirectoryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -239,6 +240,12 @@
     <Content Include="web\images\key.png" />
     <Content Include="web\images\link1-bg.gif" />
     <Content Include="web\images\logo.png" />
+    <Content Include="web\images\Oteller\Belçika.jpg" />
+    <Content Include="web\images\Oteller\Brüksel.jpg" />
+    <Content Include="web\images\Oteller\lyon.jpg" />
+    <Content Include="web\images\Oteller\Mardin.jpg" />
+    <Content Include="web\images\Oteller\Paris.jpg" />
+    <Content Include="web\images\Oteller\Roma.jpg" />
     <Content Include="web\images\pic.jpg" />
     <Content Include="web\images\pic1.jpg" />
     <Content Include="web\images\pic10.jpg" />
@@ -396,6 +403,10 @@
     <Content Include="Views\Admin\YorumGetir.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Admin\İletisim.cshtml" />
+    <Content Include="Views\Directory\Hotels.cshtml" />
+    <Content Include="Views\Directory\Restaurants.cshtml" />
+    <Content Include="Views\Directory\Museums.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

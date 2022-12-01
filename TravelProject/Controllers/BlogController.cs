@@ -45,7 +45,9 @@ namespace TravelProject.Controllers
         {
             c.Yorumlars.Add(y); // Ekleme
             c.SaveChanges(); // Yüklüyoruz
-            return PartialView(); 
+            return PartialView();
+
+            //return RedirectToAction("Index", "Blog");
         }
 
         #endregion
