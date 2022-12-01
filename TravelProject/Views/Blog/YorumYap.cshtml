@@ -4,13 +4,16 @@
     Layout = null;
 }
 
-<div class="content-form">
+<head>
+    <script src="~/Scripts/Main.js"></script>
+</head>
+<div id="form" class="content-form">
     <h3>Bir Yorum Yapın</h3>
     <form method="post">
-        <input type="text" placeholder="ID" name="Blogid" value="@ViewBag.deger" required />
+        <input type="text" placeholder="ID" name="Blogid" value="@ViewBag.deger" readonly />
         <input type="text" placeholder="Kullanıcı Adı" name="KullaniciAdi" required />
         <input type="text" placeholder="Mail Adresi" name="Mail" required />
         <textarea placeholder="Yorum" name="Yorum"></textarea>
-        <input type="submit" value="Gönder" />
+        <input type="submit" value="Gönder" $('#form').trigger("reset"); />
     </form>
 </div>

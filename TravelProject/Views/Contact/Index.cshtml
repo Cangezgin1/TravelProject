@@ -1,0 +1,119 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+
+
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/contact-template/css/style.css">
+</head>
+<body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="wrapper">
+                        <div class="row no-gutters">
+                            <div class="col-md-6 d-flex align-items-stretch">
+                                <div class="info-wrap w-100 p-md-5 p-4 py-5 img">
+                                    <h3 style="text-align:center;margin-bottom:17px">İletişim Bilgileri</h3>
+                                    <div class="dbox w-100 d-flex align-items-start">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-map-marker"></span>
+                                        </div>
+                                        <div class="text pl-3">
+                                            <p><span>Adres:</span><br /> Mecidiyeköy, İSTANBUL </p>
+                                        </div>
+                                    </div>
+                                    <div class="dbox w-100 d-flex align-items-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-phone"></span>
+                                        </div>
+                                        <div class="text pl-3">
+                                            <p><span>Telefon:</span> <br /> <a href="tel://05012764747">+90 501 276 4747</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="dbox w-100 d-flex align-items-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-paper-plane"></span>
+                                        </div>
+                                        <div class="text pl-3">
+                                            <p><span>Email:</span> <br /> <a href="mailto:can.gesgin@gmail.com">can.gesgin@gmail.com</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="dbox w-100 d-flex align-items-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-globe"></span>
+                                        </div>
+                                        <div class="text pl-3">
+                                            <p><span>Website</span> <br /> <a href="https://cangezzgin.netlify.app/">cangezzgin.com</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+
+                            <div class="col-md-6 d-flex align-items-stretch">
+                                <div class="contact-wrap w-100 p-md-5 p-4 py-5">
+                                    <div id="form-message-warning" class="mb-4"></div>
+                                    <div id="form-message-success" class="mb-4">
+                                        Your message was sent, thank you!
+                                    </div>
+                                    <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="name" id="name" placeholder="İsim">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" name="email" id="email" placeholder="Mail">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Konu">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <textarea name="message" class="form-control" id="message" cols="30" rows="6" placeholder="Mesajınız"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="submit" value="GÖNDER" class="btn btn-primary">
+                                                    <div class="submitting"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="~/contact-template/js/jquery.min.js"></script>
+    <script src="~/contact-template/js/popper.js"></script>
+    <script src="~/contact-template/js/bootstrap.min.js"></script>
+    <script src="~/contact-template/js/jquery.validate.min.js"></script>
+    <script src="~/contact-template/js/main.js"></script>
+
+</body>
+</html>
+

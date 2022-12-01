@@ -16,7 +16,7 @@ namespace TravelProject.Controllers
 
         public ActionResult Index()
         {
-            var values = c.Blogs.Take(6).ToList(); // Blog tablosundan 4 veri listeliyoruz.
+            var values = c.Blogs.OrderByDescending(x => x.ID).Take(3).ToList(); // Blog tablosundan 3 veri listeliyoruz.
             return View(values);
         }
 

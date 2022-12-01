@@ -18,6 +18,7 @@ namespace TravelProject.Controllers
         public ActionResult Index()
         {
             by.Deger1 = c.Blogs.ToList(); // Blog tablosunu listeliyoruz.
+            by.Deger2 = c.Yorumlars.OrderByDescending(x => x.ID).Take(5).Distinct();
             by.Deger3 = c.Blogs.OrderByDescending(x=>x.ID).Take(5).Distinct(); // Blog tablosundan ilk 5 veriyi getiriyoruz(tekrar edenler hariç yani iki farklı veri( Distinict() ) )
             return View(by);
         }
@@ -43,7 +44,7 @@ namespace TravelProject.Controllers
         public PartialViewResult YorumYap(Yorumlar y) // Yorumlardan parametre türetip değerleri ona atıyoruz.
         {
             c.Yorumlars.Add(y); // Ekleme
-            c.SaveChanges(); // Yüklüyruz
+            c.SaveChanges(); // Yüklüyoruz
             return PartialView(); 
         }
 

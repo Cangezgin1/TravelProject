@@ -70,6 +70,9 @@ namespace TravelProject.Controllers
         }
         #endregion
 
+
+
+
         #region Yorum Listeleme
 
         public ActionResult YorumListesi()

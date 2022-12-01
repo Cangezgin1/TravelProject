@@ -47,11 +47,12 @@
                 </div>
                 <div class="comments">
                     <h3>Son Yorumlar</h3>
-                    <ul>
-                        <li><a href="#">Amada Doe </a> on <a href="#">Hello World!</a></li>
-                        <li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>
-                        <li><a href="#">Steve Roberts  </a> on <a href="#">HTML5/CSS3</a></li>
-                    </ul>
+                    @foreach (var item in Model.Deger2)
+                     {
+                        <ul>
+                            <li><a href="/Blog/BlogDetay/@item.Blogid">@item.KullaniciAdi :<br /> @item.Yorum</a></li>
+                        </ul>
+                     }
                 </div>
                 <div class="clearfix"></div>
             </div>
